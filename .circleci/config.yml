@@ -21,7 +21,7 @@ jobs:
     steps:
       - checkout
       - print_pipeline_id:
-          id: <<pipleline.id>>
+          id: <<pipeline.id>>
 
 workflows:
   print-workflow-workflow:
