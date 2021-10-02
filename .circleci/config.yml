@@ -3,12 +3,12 @@
 version: 2.1
 
 commands:
-  sayhello:
+  print_pipeline_id:
     description: "A very simple command for demonstration purposes"
     parameters:
       to:
         type: string
-        default: "Hello World"
+        default: "Hello World Comamnd Default"
     steps:
       - run: echo << parameters.to >>
 
@@ -22,8 +22,8 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-      - sayhello:
-          to: "Command Works"
+      - sayhello
+#          to: "Command Works"
 
 workflows:
   say-hello-workflow:
