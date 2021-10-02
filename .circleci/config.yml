@@ -7,8 +7,8 @@ commands:
     description: "A very simple command to print workflow ID"
     steps:
       - run:
-          name: "print workflow ID"
-          command: "echo $CIRCLE_WORKFLOW_ID 
+        name: "print workflow ID"
+        command: "echo $CIRCLE_WORKFLOW_ID 
       
 
 jobs:
