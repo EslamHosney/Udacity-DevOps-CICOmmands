@@ -6,7 +6,10 @@ commands:
   print_pipeline_id:
     description: "A very simple command to print workflow ID"
     steps:
-      - run: echo $CIRCLE_WORKFLOW_ID
+      - run:
+          name: "print workflow ID"
+          command: "echo $CIRCLE_WORKFLOW_ID 
+      
 
 jobs:
   print-workflow-id:
