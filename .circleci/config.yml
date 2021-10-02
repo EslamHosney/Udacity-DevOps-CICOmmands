@@ -22,7 +22,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-      - sayhello
+      - print_pipeline_id
 #          to: "Command Works"
 
 workflows:
