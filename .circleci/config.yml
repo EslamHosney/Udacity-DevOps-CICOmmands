@@ -4,28 +4,20 @@ version: 2.1
 
 commands:
   print_pipeline_id:
-    description: "A very simple command for demonstration purposes"
-    parameters:
-      to:
-        type: string
-        default: "Hello World Comamnd Default"
+    description: "A very simple command to print workflow ID"
     steps:
       - run: echo $CIRCLE_WORKFLOW_ID
 
-
 jobs:
-  say-hello:
+  print-workflow-id:
     docker:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
       - print_pipeline_id
 #          to: "Command Works"
 
 workflows:
-  say-hello-workflow:
+  print-workflow-workflow:
     jobs:
-      - say-hello
+      - print-workflow-id
