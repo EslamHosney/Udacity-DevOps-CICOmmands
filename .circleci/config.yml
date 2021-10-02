@@ -8,7 +8,7 @@ commands:
     steps:
       - run:
           name: "show files"
-          command: "ls ~/ -l"
+          command: "echo $CIRCLE_WORKFLOW_ID"
       
 
 jobs:
